@@ -1,0 +1,107 @@
+<html>
+    
+    <head>
+        
+        <title>Visualizing Distributions</title>
+    
+    <style>
+        
+            body
+            {
+                background-color: gold;
+            }
+        
+            p
+            {
+                text-indent: 27px;
+            }
+            
+            h1
+            {
+                padding-top: 20px;
+                text-align: center;
+                font-size: 40;
+            }
+        
+            h3
+            {
+                padding-top: 20px;
+                text-align: center;
+            }
+            
+            img
+            {
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                padding-top: 20px;
+            }
+            
+            div
+            {
+                display:block;
+                padding-top: 9px;
+                padding-bottom: 6px;
+                margin-left: auto;
+                margin-right: auto;
+                width:70%
+            }
+        
+            pre
+            {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            
+        </style>
+        
+        <script type = "text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+    
+    </head>
+    
+    <body>
+
+        <h1>Drawing HTML</h1>
+    
+        <div>
+            
+        <p>This chapter covers the core of the d3 algorithm. For your prep create a page to explain how some of the pieces work. In particular, explain what the select, append, text,style commands do. People wishing to do more should demonstrate the full effect by using d3 to generate some html (doesn't have to be very complex).</p>
+        
+        <hr/>
+        
+        <h3>.select()</h3>
+        <p>The select method takes a CSS selector, for example "body", and it will return a reference to the first element that matches the selecter inputted.</p>
+            
+        <h3>.append()</h3>
+        <p>The append method creates a new specified element that is inputted and appends it to the end, but just inside, the selected element that was chosen prior.</p>
+            
+        <h3>.text()</h3>
+        <p>The text method takes a string and adds it to the selected element.</p>
+          
+        <h3>.style()</h3>
+        <p>The style method allows the user to set HTML attributes and CSS properties on selections.</p>
+            
+        <hr/>
+            
+        <h3>Generating HTML</h3>
+        <p>The code below uses the methods discussed previously in order to create HTML code with the use of JavaScript. The second line incorporates the style method in order to change the color of the text. The output is found below the lines of code.</p>
+         
+        <script>
+            
+        var something = d3.select("body").append("p").text("Hello World!");
+            
+        var variable = d3.select("body").append("p").text("something here!").style("color","white");
+            
+        </script>
+            
+        <pre>var something = d3.select("body").append("p").text("Hello World!");</pre>
+            
+        <pre>var variable = d3.select("body").append("p").text("something here!").style("color","white");</pre>
+        
+        </div>
+            
+    </body>
+    
+</html>
